@@ -1,0 +1,14 @@
+<h1>Search to:<small>{{endpoint}}</small></h1>
+<hr />
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info">
+      Not Found {{endpoint}}
+    </div>
+  </div>
+</div>
+
+<div class="card-group">
+  <app-hero-target [hero]="hero" [index]="i" *ngFor="let hero of heroes; let i = index"></app-hero-target>
+</div>
